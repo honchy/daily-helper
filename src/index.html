@@ -3,18 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title></title>
   </head>
   <body>
-    <p><button id="window-btn">Open Ext Panel</button></p>
-    <script type="text/javascript">
-      const { ipcRenderer } = require("electron");
-      document.body
-        .querySelector("#window-btn")
-        .addEventListener("click", () => {
-          ipcRenderer.invoke("api-channel", "createWindow", "new-window");
-        });
-    </script>
+    <div
+      id="app-root"
+      style="position:absolute;top:0;left:0;right:0;bottom:0;"
+    ></div>
   </body>
 </html>

@@ -1,5 +1,5 @@
-import { BrowserWindow } from "electron";
-import indexPage from "../index.html";
+import { BrowserWindow, app } from "electron";
+import path from 'path';
 
 const window_ref = {};
 
@@ -31,7 +31,8 @@ export function createWindow(key, options = {}) {
     }
   });
   window_ref[k] = newWin;
-  newWin.loadFile(indexPage);
+  console.log(app.getAppPath(path));
+  newWin.loadFile(path.join(app.getAppPath(), 'web-resource', 'page', 'main', 'index.html'));
   newWin.once("ready-to-show", () => {
     newWin.show();
   });

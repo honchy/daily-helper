@@ -1,4 +1,4 @@
 {
-  "presets": [["@babel/preset-env", { "useBuiltIns": "usage" }]],
+  "presets": [["@babel/preset-env", { "useBuiltIns": "usage" }], "@babel/preset-react"],
   "plugins": ["@babel/transform-runtime"]
 }
